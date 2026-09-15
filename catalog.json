@@ -1,0 +1,12 @@
+[
+  {
+    "id": "sandbox_boundary_poc",
+    "name": "沙箱边界 POC",
+    "version": "0.1.0",
+    "description": "验证 MediaVault 第三方插件的文件系统、网络和核心模块访问边界。",
+    "source": "github:InfinityPacer/MediaVault-Plugins",
+    "subdir": "plugins/sandbox-boundary-poc",
+    "events": ["strm.generated", "media.uploaded", "organize.completed"],
+    "sha256": ""
+  }
+]

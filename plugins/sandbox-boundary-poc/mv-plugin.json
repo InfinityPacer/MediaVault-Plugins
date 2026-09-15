@@ -1,0 +1,27 @@
+{
+  "manifest_version": 1,
+  "id": "sandbox_boundary_poc",
+  "name": "沙箱边界 POC",
+  "version": "0.1.0",
+  "description": "验证第三方插件能否访问 MoviePilot、宿主文件和 MediaVault 核心模块。",
+  "runtime": "python3-stdlib",
+  "entrypoint": "runner/main.py",
+  "events": ["strm.generated", "media.uploaded", "organize.completed"],
+  "permissions": [],
+  "actions": {
+    "probe": {
+      "title": "执行沙箱探测",
+      "input_schema": {"type": "object", "additionalProperties": false}
+    }
+  },
+  "ui": {
+    "schema": {
+      "type": "form",
+      "title": "沙箱边界 POC",
+      "description": "执行一次固定目标探测，不读取或返回文件内容。",
+      "components": [
+        {"type": "button", "id": "probe", "action": "probe", "label": "执行探测"}
+      ]
+    }
+  }
+}
